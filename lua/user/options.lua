@@ -43,6 +43,7 @@ local options = {
   tabstop = 2,                             -- insert 2 spaces for a tab
   scrolloff = 8,                           -- minimal number of screen lines to keep above and below the cursor
   sidescrolloff = 8,                       -- minimal number of screen columns either side of cursor if wrap is `false`
+  splitkeep="screen",
 
   backup = false,                          -- creates a backup file
   -- backupdir = '',

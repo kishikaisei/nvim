@@ -7,34 +7,35 @@ return packer.startup(function(use)
   use { "nvim-lua/popup.nvim" } -- An implementation of the Popup API  from vim in Neovim
   use { "MunifTanjim/nui.nvim" } -- UI Component Library
   use { "tjdevries/colorbuddy.nvim" } -- Colourscheme helper
+  use { "nvim-tree/nvim-web-devicons" } -- Extra icons
 
   --  Aesthetics --
   -------------------
-  use { "kyazdani42/nvim-web-devicons" } -- Extra icons
   use { "akinsho/bufferline.nvim" } -- Buffer tabs
   use { "nvim-lualine/lualine.nvim" } -- Status line
   use { "lukas-reineke/indent-blankline.nvim" } -- Indent lines
   use { "goolord/alpha-nvim" } -- Starting dashboard
   use { "lewis6991/impatient.nvim" } -- Speed-up loading plugins
-  -- use { "luukvbaal/stabilize.nvim" } -- Stabilize view
   -- use { "norcalli/nvim-colorizer.lua" } -- Visualise colour codes
-  -- use { "folke/todo-comments.nvim" } -- Show to do list in qf
+  use { "folke/todo-comments.nvim" } -- Show to do list in qf
   use { "RRethy/vim-illuminate" } -- Highlight current word
   use { "gelguy/wilder.nvim" }
   use { "petertriho/nvim-scrollbar" }
-  use {"tiagovla/scope.nvim"} -- Only show buffers if current tab
+  use { "tiagovla/scope.nvim" } -- Only show buffers if current tab
+  use { "folke/trouble.nvim" } -- Show lsp errors in qf
+  use { "folke/noice.nvim" } -- Noice notifications
 
   --  Tools --
   --------------
   use { "windwp/nvim-autopairs" } -- Autopairs, integrates with both cmp and treesitter
   use { "JoosepAlviste/nvim-ts-context-commentstring" } -- Comment out code using TS
   use { "numToStr/Comment.nvim" } -- Easily comment stuff
-  use { "kyazdani42/nvim-tree.lua" } -- File explorer
+  use { "nvim-tree/nvim-tree.lua" } -- File explorer
   use { "moll/vim-bbye" } -- Better closing of buffers
   use { "akinsho/toggleterm.nvim" } -- Terminal runner
   use { "ahmedkhalf/project.nvim" } -- Projects list based on VCS
   use { "folke/which-key.nvim" } -- Emacs style whichkey
-  use { "github/copilot.vim" } -- AI powered code completion
+  use { "zbirenbaum/copilot.lua" } -- Githubs AI code completion
   use { "andymass/vim-matchup" } -- Better % movement
   use { "habamax/vim-godot" } -- Godt syntax and scene runner
   use { "rhysd/clever-f.vim" } -- Better F
@@ -51,7 +52,7 @@ return packer.startup(function(use)
       {'neovim/nvim-lspconfig'},
       {'williamboman/mason.nvim'},
       {'williamboman/mason-lspconfig.nvim'},
-  
+
       -- Autocompletion
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-buffer'},
@@ -59,13 +60,14 @@ return packer.startup(function(use)
       {'saadparwaiz1/cmp_luasnip'},
       {'hrsh7th/cmp-nvim-lsp'},
       {'hrsh7th/cmp-nvim-lua'},
-  
+
       -- Snippets
       {'L3MON4D3/LuaSnip'},
       {'rafamadriz/friendly-snippets'},
 
       -- Misc
       {'j-hui/fidget.nvim'},
+      {'onsails/lspkind.nvim'}
     }
   }
   -- use { "zbirenbaum/copilot-cmp", module = "copilot_cmp" } -- Github Copilot CMP

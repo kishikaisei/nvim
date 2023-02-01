@@ -192,6 +192,16 @@ local mappings = {
     ["H"] = {":tabnext<CR>", "Previous tab"},
     ["c"] = {":tabclose<CR>", "Close tab"},
   },
+
+  x = {
+    name = "Trouble",
+    ["x"] = {"<cmd>TroubleToggle<cr>", "Toggle"},
+    ["w"] = {"<cmd>TroubleToggle workspace_diagnostics<cr>", "Workspace Diag"},
+    ["d"] = {"<cmd>TroubleToggle document_diagnostics<cr><cr>", "Document Diag"},
+    ["l"] = {"<cmd>TroubleToggle loclist<cr>", "Loclist"},
+    ["q"] = {"<cmd>TroubleToggle quickfix<cr>", "Quickfix"},
+    ["R"] = {"<cmd>TroubleToggle lsp_references<cr>", "LSP References"},
+  },
 }
 
 local vmappings = {

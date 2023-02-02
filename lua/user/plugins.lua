@@ -23,7 +23,13 @@ return packer.startup(function(use)
   use { "petertriho/nvim-scrollbar" }
   use { "tiagovla/scope.nvim" } -- Only show buffers if current tab
   use { "folke/trouble.nvim" } -- Show lsp errors in qf
-  use { "folke/noice.nvim" } -- Noice notifications
+  use {
+    "folke/noice.nvim",
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    }
+  } -- Noice notifications
 
   --  Tools --
   --------------
